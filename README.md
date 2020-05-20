@@ -1,3 +1,5 @@
-# xml
-UML Class.png
-![Modela podataka](UML\Class.png)
+# XMLWS
+Model poadataka
+
+![Alt](UML/UMLClassDiagram.png?raw=true)
+
