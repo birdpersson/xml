@@ -69,7 +69,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				// svaki zahtev mora biti autorizovan
 				.anyRequest().authenticated().and()
 
-				// .cors().and()
+				 .cors().and()
 
 				// presretni svaki zahtev filterom
 				.addFilterBefore(new TokenAuthenticationFilter(tokenUtils, jwtUserDetailsService),
