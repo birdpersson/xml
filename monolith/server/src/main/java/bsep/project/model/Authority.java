@@ -27,6 +27,7 @@ public class Authority implements GrantedAuthority {
 
 	@Override
 	public String getAuthority() {
+		System.out.println("aa");
 		return name;
 	}
 
