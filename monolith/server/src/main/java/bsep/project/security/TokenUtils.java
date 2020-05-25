@@ -48,7 +48,8 @@ public class TokenUtils {
 	}
 
 	private String generateAudience() {
-//		Moze se iskoristiti org.springframework.mobile.device.Device objekat za odredjivanje tipa uredjaja sa kojeg je zahtev stigao.
+		System.out.println("ss");
+		//		Moze se iskoristiti org.springframework.mobile.device.Device objekat za odredjivanje tipa uredjaja sa kojeg je zahtev stigao.
 		
 //		String audience = AUDIENCE_UNKNOWN;
 //		if (device.isNormal()) {
