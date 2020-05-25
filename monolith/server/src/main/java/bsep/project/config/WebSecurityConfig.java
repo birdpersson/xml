@@ -18,7 +18,7 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 import bsep.project.security.TokenUtils;
 import bsep.project.security.auth.RestAuthenticationEntryPoint;
 import bsep.project.security.auth.TokenAuthenticationFilter;
-import bsep.project.service.CustomUserDetailsService;
+import bsep.project.service.impl.CustomUserDetailsService;
 
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)

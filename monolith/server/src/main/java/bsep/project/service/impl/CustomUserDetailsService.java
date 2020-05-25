@@ -1,4 +1,4 @@
-package bsep.project.service;
+package bsep.project.service.impl;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
