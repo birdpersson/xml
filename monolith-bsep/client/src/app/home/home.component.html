@@ -1,16 +1,5 @@
 <div class="content" fxLayout="row" fxLayoutAlign="center none">
-  <app-api-card
-    (apiClick)="makeRequest($event)"
-    [responseObj]="fooResponse"
-    apiText="/api/foo"
-    content='This is an demo public endpoint which requires no authentication.'
-    fxFlex
-    imgUrl="assets/image/foo.png"
-    subTitle="Public"
-    title='"Foo"'
-  >
-  </app-api-card>
-
+ 
   <app-api-card
     (apiClick)="makeRequest($event)"
     [responseObj]="whoamIResponse"
