@@ -15,13 +15,15 @@ export class AdvertComponent implements OnInit {
     private userService: UserService) { }
   usersAdverts: Advert[];
   me: any;
+  new_advert:Advert;
   ngOnInit() {
-    
-   this.showMyAdverts();
-   this.showMyUserName();
+    this.showMyAdverts();
+    this.new_advert = new Advert();
+    this.getMyInfo();
+   
   }
   
-  public showMyUserName(){
+  public getMyInfo(){
     this.userService.getMyInfo()
     .subscribe(data => this.me = data);
 
@@ -30,6 +32,13 @@ export class AdvertComponent implements OnInit {
     this.advertService.getAdvertsFrom()
     .subscribe( data => this.usersAdverts = data);
    
+  }
+  submitAddForm(){
+    this.advertService.postNewAdvert(this.new_advert)
+    .subscribe((data)=> {      
+      this.new_advert.user_id = this.me.id;    
+      this.usersAdverts = data;
+    });
   }
 
 }

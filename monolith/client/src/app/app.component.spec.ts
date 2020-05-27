@@ -7,8 +7,10 @@ import {ApiCardComponent, FooterComponent, HeaderComponent} from './component';
 
 
 import {ApiService, AuthService, ConfigService, FooService, UserService} from './service';
-//import {MatIconRegistry} from '@angular/material';
-//import {AngularMaterialModule} from './angular-material/angular-material.module';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatIconRegistry} from '@angular/material';
+import {MatInputModule} from '@angular/material/input';
+import {AngularMaterialModule} from './angular-material/angular-material.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
@@ -40,7 +42,7 @@ describe('AppComponent', () => {
         AdvertComponent
       ],
       imports: [
-        //AngularMaterialModule,
+        AngularMaterialModule,
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
@@ -48,11 +50,11 @@ describe('AppComponent', () => {
         AppRoutingModule
       ],
       providers: [
-        //MatIconRegistry,
-        //{
-         // provide: ApiService,
-         // useClass: MockApiService
-       // },
+        MatIconRegistry,
+        {
+         provide: ApiService,
+          useClass: MockApiService
+        },
         AuthService,
         UserService,
         FooService,

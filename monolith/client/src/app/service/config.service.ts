@@ -56,7 +56,11 @@ export class ConfigService {
   get advert_url(): string{
     return this._advert_url;
   }
+  private _add_advert_url = this.advert_url + '/add';
 
+  get add_advert_url(): string{
+    return this._add_advert_url;
+  }
   private _users_adverts_url = this._advert_url + '/all';
 
   get users_adverts_url(): string{

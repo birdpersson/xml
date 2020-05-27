@@ -4,6 +4,7 @@ CREATE OR REPLACE FUNCTION json_intext(text) RETURNS json AS $$ SELECT json_in($
 
 INSERT INTO USERS (username, password, first_name, last_name, email, enabled, last_password_reset_date) VALUES ('agency', '$2a$04$af02pjvF.2JUC3wkdR/09efRl9.B.5XcJYYTUkwxvXkgDGSSn81uu', 'Marko', 'Markovic', 'user@example.com', true, '2017-10-01 21:58:58.508-07');
 INSERT INTO USERS (username, password, first_name, last_name, email, enabled, last_password_reset_date) VALUES ('admin', '$2a$04$Vbug2lwwJGrvUXTj6z7ff.97IzVBkrJ1XfApfGNl.Z695zqcnPYra', 'Nikola', 'Nikolic', 'admin@example.com', true, '2017-10-01 18:57:58.508-07');
+
 INSERT INTO ADVERT (user_id, title) VALUES (1, 'Naslov1');
 INSERT INTO ADVERT (user_id, title) VALUES (1, 'Naslov2');
 INSERT INTO ADVERT (user_id, title) VALUES (2, 'Naslov3');

@@ -12,6 +12,11 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "ADVERT")
 public class Advert {
+		@Override
+	public String toString() {
+		return "Advert [id=" + id + ", title=" + title + ", user_id=" + user_id + "]";
+	}
+
 		@Id
 	    @Column(name = "id")
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,16 +27,17 @@ public class Advert {
 		
 		@Column(name = "user_id")
 		private Long user_id;
-		
+
 		@ManyToOne
 		@JoinColumn(name="user_id")		
-		public Long getOwner() {
+		public Long getUser_id() {
 			return user_id;
 		}
 
-		public void setOwner(Long owner) {
-			this.user_id = owner;
+		public void setUser_id(Long user_id) {
+			this.user_id = user_id;
 		}
+
 
 
 	    public Long getId() {

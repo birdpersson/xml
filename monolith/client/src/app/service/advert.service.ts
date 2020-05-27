@@ -19,8 +19,11 @@ export class AdvertService {
   ) { 
   }
   
-  getAdvertsFrom(): Observable<Advert[]>{
+  getAdvertsFrom( ): Observable<Advert[]>{
     return this.apiService.get(this.config.users_adverts_url);
   }
-
+  postNewAdvert( ad ): Observable<Advert[]>{
+   return this.apiService.post(this.config.add_advert_url , ad);
+   
+  }
 }

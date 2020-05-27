@@ -1,9 +1,37 @@
 
-<h1>Jackdaws love my big sphinx of quartz.</h1>
+<h1>Moji oglasi</h1>
 
 <div *ngFor="let ad of usersAdverts" >
-    <mat-card>{{ad.id}}# {{ad.title}}</mat-card>
+    
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{ad.id}}# {{ad.title}}
+            </mat-panel-title>
+            <mat-panel-description>
+                Type your name and age
+                <mat-icon>account_circle</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        
+        <mat-form-field>
+            <mat-label>First name</mat-label>
+            <input matInput>
+        </mat-form-field>
+        
+        <mat-form-field>
+            <mat-label>Age</mat-label>
+            <input matInput type="number" min="1">
+        </mat-form-field>
+        
+    </mat-expansion-panel>
 </div>
-<div *ngIf="me">
 
-</div>
+<h3> Dodaj novi oglas</h3>
+    <form (ngSubmit)="(submitAddForm())" class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Naslov oglasa</mat-label>
+          <input  [(ngModel)]="new_advert.title" name="title" matInput maxlength="256" placeholder="Model, serija, godiste...">
+        </mat-form-field>
+        <button type="submit">Ok</button>
+      </form>

@@ -42,17 +42,18 @@ export class ApiService {
   }
 
   post(path: string, body: any, customHeaders?: HttpHeaders): Observable<any> {
+    console.log(body);
     return this.request(path, body, RequestMethod.Post, customHeaders);
   }
-
+  
   put(path: string, body: any): Observable<any> {
     return this.request(path, body, RequestMethod.Put);
   }
-
+  
   delete(path: string, body?: any): Observable<any> {
     return this.request(path, body, RequestMethod.Delete);
   }
-
+  
   private request(path: string, body: any, method = RequestMethod.Post, custemHeaders?: HttpHeaders): Observable<any> {
     const req = new HttpRequest(method, path, body, {
       headers: custemHeaders || this.headers,

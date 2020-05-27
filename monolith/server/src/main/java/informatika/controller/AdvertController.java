@@ -4,6 +4,7 @@ import java.nio.file.AccessDeniedException;
 import java.util.List;
 import java.util.Optional;
 
+import org.hibernate.query.criteria.internal.expression.ConcatExpression;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -55,9 +56,10 @@ public class AdvertController {
 	@PostMapping(value = "/add",
 			consumes = MediaType.APPLICATION_JSON_VALUE,
 			produces = MediaType.APPLICATION_JSON_VALUE)
-	public Advert addAdvert(@RequestBody Advert ad){
+	public List<Advert> addAdvert(@RequestBody Advert ad) throws AccessDeniedException{
+		System.out.println("USLI U POST" + ad);
 		adservice.save(ad);
-		return ad;
+		return adservice.findAll(ad.getUser_id());
 	}
 
 	
