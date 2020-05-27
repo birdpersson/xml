@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+<<<<<<< HEAD:monolith-bsep/server/.settings/org.eclipse.wst.common.component
+    <wb-module deploy-name="monolith-agency">
+        <wb-resource deploy-path="/" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/" source-path="/src/main/resources"/>
+=======
+    <wb-module deploy-name="project">
+        <wb-resource deploy-path="/" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/" source-path="/src/test/java"/>
+>>>>>>> parent of 888c5e94... Divided monoliths:monolith/server/.settings/org.eclipse.wst.common.component
+    </wb-module>
+</project-modules>
