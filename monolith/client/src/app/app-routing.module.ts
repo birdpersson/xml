@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {NgModule, Component} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './home';
 import {LoginComponent} from './login';
@@ -8,12 +8,17 @@ import {NotFoundComponent} from './not-found';
 import {ChangePasswordComponent} from './change-password';
 import {ForbiddenComponent} from './forbidden';
 import {SignupComponent} from './signup';
+import {AdvertComponent} from './component/advert';
 
 export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
     pathMatch: 'full'
+  },
+  {
+    path: 'advert',
+   component: AdvertComponent
   },
   {
     path: 'signup',

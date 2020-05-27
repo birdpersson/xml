@@ -2,7 +2,7 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {SignupComponent} from './signup.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {AngularMaterialModule} from '../angular-material/angular-material.module';
+//import {AngularMaterialModule} from '../angular-material/angular-material.module';
 import {HttpClientModule} from '@angular/common/http';
 import {ApiService, AuthService, ConfigService, FooService, UserService} from '../service';
 import {AppRoutingModule} from '../app-routing.module';
@@ -24,7 +24,7 @@ describe('SignupComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         BrowserAnimationsModule,
-        AngularMaterialModule,
+//        AngularMaterialModule,
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,

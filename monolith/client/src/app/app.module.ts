@@ -18,11 +18,12 @@ import {ChangePasswordComponent} from './change-password/change-password.compone
 import {ForbiddenComponent} from './forbidden/forbidden.component';
 import {AdminComponent} from './admin/admin.component';
 import {SignupComponent} from './signup/signup.component';
-import {AngularMaterialModule} from './angular-material/angular-material.module';
-import {MatIconRegistry} from '@angular/material';
+//import {AngularMaterialModule} from './angular-material/angular-material.module';
+//import {MatIconRegistry} from '@angular/material';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './interceptor/TokenInterceptor';
+import { AdvertComponent } from './component/advert/advert.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { TokenInterceptor } from './interceptor/TokenInterceptor';
     ChangePasswordComponent,
     ForbiddenComponent,
     AdminComponent,
-    SignupComponent
+    SignupComponent,
+    AdvertComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -46,8 +48,8 @@ import { TokenInterceptor } from './interceptor/TokenInterceptor';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    FlexLayoutModule,
-    AngularMaterialModule
+    FlexLayoutModule
+  //  AngularMaterialModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
@@ -64,7 +66,7 @@ import { TokenInterceptor } from './interceptor/TokenInterceptor';
     ApiService,
     UserService,
     ConfigService,
-    MatIconRegistry,
+   // MatIconRegistry,
   ],
   bootstrap: [AppComponent],
 })

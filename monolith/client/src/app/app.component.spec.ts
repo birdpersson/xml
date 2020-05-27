@@ -7,8 +7,8 @@ import {ApiCardComponent, FooterComponent, HeaderComponent} from './component';
 
 
 import {ApiService, AuthService, ConfigService, FooService, UserService} from './service';
-import {MatIconRegistry} from '@angular/material';
-import {AngularMaterialModule} from './angular-material/angular-material.module';
+//import {MatIconRegistry} from '@angular/material';
+//import {AngularMaterialModule} from './angular-material/angular-material.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
@@ -20,7 +20,7 @@ import {ChangePasswordComponent} from './change-password';
 import {ForbiddenComponent} from './forbidden';
 import {AdminComponent} from './admin';
 import {SignupComponent} from './signup';
-
+import {AdvertComponent} from './component/advert/advert.component';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -36,10 +36,11 @@ describe('AppComponent', () => {
         ChangePasswordComponent,
         ForbiddenComponent,
         AdminComponent,
-        SignupComponent
+        SignupComponent,
+        AdvertComponent
       ],
       imports: [
-        AngularMaterialModule,
+        //AngularMaterialModule,
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
@@ -47,11 +48,11 @@ describe('AppComponent', () => {
         AppRoutingModule
       ],
       providers: [
-        MatIconRegistry,
-        {
-          provide: ApiService,
-          useClass: MockApiService
-        },
+        //MatIconRegistry,
+        //{
+         // provide: ApiService,
+         // useClass: MockApiService
+       // },
         AuthService,
         UserService,
         FooService,
