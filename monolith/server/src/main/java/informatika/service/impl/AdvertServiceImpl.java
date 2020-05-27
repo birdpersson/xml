@@ -1,5 +1,4 @@
-package rs.ac.uns.ftn.informatika.spring.security.service.impl;
-
+package informatika.service.impl;
 import java.nio.file.AccessDeniedException;
 import java.util.List;
 import java.util.Optional;
@@ -7,9 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import rs.ac.uns.ftn.informatika.spring.security.model.Advert;
-import rs.ac.uns.ftn.informatika.spring.security.repository.Advertrepository;
-import rs.ac.uns.ftn.informatika.spring.security.service.AdvertService;
+import informatika.model.Advert;
+import informatika.repository.Advertrepository;
+import informatika.service.AdvertService;
 
 @Service
 public class AdvertServiceImpl implements AdvertService {

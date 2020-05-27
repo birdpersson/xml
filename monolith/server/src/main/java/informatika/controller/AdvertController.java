@@ -1,4 +1,4 @@
-package rs.ac.uns.ftn.informatika.spring.security.controller;
+package informatika.controller;
 
 import java.nio.file.AccessDeniedException;
 import java.util.List;
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import rs.ac.uns.ftn.informatika.spring.security.model.Advert;
-import rs.ac.uns.ftn.informatika.spring.security.service.AdvertService;
+import informatika.model.Advert;
+import informatika.service.AdvertService;
 
 @RestController
 @RequestMapping(value = "/api/advert", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -26,8 +26,8 @@ public class AdvertController {
 	private AdvertService adservice;
 	
 
+	//@PreAuthorize("hasRole('ADMIN')")
 	@GetMapping("/all")
-	@PreAuthorize("hasRole('ADMIN')")
 	public List<Advert> getAllAds() throws AccessDeniedException {
 		return adservice.findAll();
 	}

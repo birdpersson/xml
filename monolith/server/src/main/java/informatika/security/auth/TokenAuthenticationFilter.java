@@ -1,5 +1,4 @@
-package rs.ac.uns.ftn.informatika.spring.security.security.auth;
-
+package informatika.security.auth;
 import java.io.IOException;
 
 import javax.servlet.FilterChain;
@@ -12,7 +11,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import rs.ac.uns.ftn.informatika.spring.security.security.TokenUtils;
+import informatika.security.TokenUtils;
 
 //Filter koji ce presretati svaki zahtev klijenta ka serveru
 //Sem nad putanjama navedenim u WebSecurityConfig.configure(WebSecurity web)

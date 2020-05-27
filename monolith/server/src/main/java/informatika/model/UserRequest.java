@@ -1,5 +1,4 @@
-package rs.ac.uns.ftn.informatika.spring.security.model;
-
+package informatika.model;
 // DTO koji preuzima podatke iz HTML forme za registraciju
 public class UserRequest {
 

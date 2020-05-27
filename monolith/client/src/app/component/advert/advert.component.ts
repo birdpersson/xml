@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AdvertService } from 'app/service/advert.service';
+import { Advert } from 'app/shared/models/advert';
 
 @Component({
   selector: 'app-advert',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdvertComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private advertService:AdvertService) { }
+  usersAdverts: Advert[];
   ngOnInit() {
+    
+   this.showMyAdverts();
+  }
+  public showMyAdverts(){
+    this.advertService.getMyAdverts()
+    .subscribe( data => this.usersAdverts = data);
+   
   }
 
 }

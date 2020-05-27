@@ -1,5 +1,4 @@
-package rs.ac.uns.ftn.informatika.spring.security.security.auth;
-
+package informatika.security.auth;
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 

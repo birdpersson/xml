@@ -1,4 +1,5 @@
-package rs.ac.uns.ftn.informatika.spring.security.model;
+package informatika.model;
+
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;

@@ -1,5 +1,4 @@
-package rs.ac.uns.ftn.informatika.spring.security.model;
-
+package informatika.model;
 // DTO koji enkapsulira generisani JWT i njegovo trajanje koji se vracaju klijentu
 public class UserTokenState {
 	

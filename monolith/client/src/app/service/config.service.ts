@@ -51,4 +51,18 @@ export class ConfigService {
     return this._signup_url;
   }
 
+  private _advert_url = this._api_url +  '/advert';
+
+  get advert_url(): string{
+    return this._advert_url;
+  }
+
+  private _users_adverts_url = this._advert_url + '/all';
+
+  get users_adverts_url(): string{
+    
+    return this._users_adverts_url;
+  }
+//  private _advert_by_id_url = this._advert_url + '/';
+  
 }

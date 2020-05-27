@@ -1,4 +1,4 @@
-package rs.ac.uns.ftn.informatika.spring.security;
+package informatika;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

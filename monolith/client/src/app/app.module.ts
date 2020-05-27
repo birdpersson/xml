@@ -6,6 +6,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
+
 import {HomeComponent} from './home';
 import {LoginComponent} from './login';
 import {AdminGuard, GuestGuard, LoginGuard} from './guard';
@@ -18,8 +19,9 @@ import {ChangePasswordComponent} from './change-password/change-password.compone
 import {ForbiddenComponent} from './forbidden/forbidden.component';
 import {AdminComponent} from './admin/admin.component';
 import {SignupComponent} from './signup/signup.component';
-//import {AngularMaterialModule} from './angular-material/angular-material.module';
-//import {MatIconRegistry} from '@angular/material';
+import {AngularMaterialModule} from './angular-material/angular-material.module';
+import {MatIconRegistry} from '@angular/material';
+import {MatTabsModule} from '@angular/material/tabs';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './interceptor/TokenInterceptor';
@@ -40,16 +42,19 @@ import { AdvertComponent } from './component/advert/advert.component';
     AdminComponent,
     SignupComponent,
     AdvertComponent
+  
   ],
   imports: [
+    
     BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    FlexLayoutModule
-  //  AngularMaterialModule
+    MatTabsModule,
+    FlexLayoutModule,
+    AngularMaterialModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
@@ -66,7 +71,7 @@ import { AdvertComponent } from './component/advert/advert.component';
     ApiService,
     UserService,
     ConfigService,
-   // MatIconRegistry,
+    MatIconRegistry,
   ],
   bootstrap: [AppComponent],
 })

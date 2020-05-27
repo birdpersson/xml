@@ -1,8 +1,7 @@
-package rs.ac.uns.ftn.informatika.spring.security.service;
-
+package informatika.service;
 import java.util.List;
 
-import rs.ac.uns.ftn.informatika.spring.security.model.Authority;
+import informatika.model.Authority;
 
 public interface AuthorityService {
 	List<Authority> findById(Long id);

@@ -1,4 +1,4 @@
-package rs.ac.uns.ftn.informatika.spring.security.controller;
+package informatika.controller;
 
 import java.security.Principal;
 import java.util.HashMap;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import rs.ac.uns.ftn.informatika.spring.security.model.User;
-import rs.ac.uns.ftn.informatika.spring.security.service.UserService;
+import informatika.model.User;
+import informatika.service.UserService;
 
 // Primer kontrolera cijim metodama mogu pristupiti samo autorizovani korisnici
 @RestController

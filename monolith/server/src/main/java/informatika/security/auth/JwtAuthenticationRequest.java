@@ -1,5 +1,4 @@
-package rs.ac.uns.ftn.informatika.spring.security.security.auth;
-
+package informatika.security.auth;
 // DTO za login
 public class JwtAuthenticationRequest {
 	

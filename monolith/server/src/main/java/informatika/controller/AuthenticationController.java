@@ -1,4 +1,4 @@
-package rs.ac.uns.ftn.informatika.spring.security.controller;
+package informatika.controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,14 +23,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import rs.ac.uns.ftn.informatika.spring.security.exception.ResourceConflictException;
-import rs.ac.uns.ftn.informatika.spring.security.model.User;
-import rs.ac.uns.ftn.informatika.spring.security.model.UserRequest;
-import rs.ac.uns.ftn.informatika.spring.security.model.UserTokenState;
-import rs.ac.uns.ftn.informatika.spring.security.security.TokenUtils;
-import rs.ac.uns.ftn.informatika.spring.security.security.auth.JwtAuthenticationRequest;
-import rs.ac.uns.ftn.informatika.spring.security.service.UserService;
-import rs.ac.uns.ftn.informatika.spring.security.service.impl.CustomUserDetailsService;
+import informatika.exception.ResourceConflictException;
+import informatika.model.User;
+import informatika.model.UserRequest;
+import informatika.model.UserTokenState;
+import informatika.security.TokenUtils;
+import informatika.security.auth.JwtAuthenticationRequest;
+import informatika.service.UserService;
+import informatika.service.impl.CustomUserDetailsService;
 
 //Kontroler zaduzen za autentifikaciju korisnika
 @RestController

@@ -1,5 +1,4 @@
-package rs.ac.uns.ftn.informatika.spring.security.service.impl;
-
+package informatika.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,12 +7,12 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import rs.ac.uns.ftn.informatika.spring.security.model.Authority;
-import rs.ac.uns.ftn.informatika.spring.security.model.User;
-import rs.ac.uns.ftn.informatika.spring.security.model.UserRequest;
-import rs.ac.uns.ftn.informatika.spring.security.repository.UserRepository;
-import rs.ac.uns.ftn.informatika.spring.security.service.AuthorityService;
-import rs.ac.uns.ftn.informatika.spring.security.service.UserService;
+import informatika.model.Authority;
+import informatika.model.User;
+import informatika.model.UserRequest;
+import informatika.repository.UserRepository;
+import informatika.service.AuthorityService;
+import informatika.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {

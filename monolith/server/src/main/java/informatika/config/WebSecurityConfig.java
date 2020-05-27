@@ -1,4 +1,4 @@
-package rs.ac.uns.ftn.informatika.spring.security.config;
+package informatika.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -15,10 +15,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
-import rs.ac.uns.ftn.informatika.spring.security.security.TokenUtils;
-import rs.ac.uns.ftn.informatika.spring.security.security.auth.RestAuthenticationEntryPoint;
-import rs.ac.uns.ftn.informatika.spring.security.security.auth.TokenAuthenticationFilter;
-import rs.ac.uns.ftn.informatika.spring.security.service.impl.CustomUserDetailsService;
+import informatika.security.TokenUtils;
+import informatika.security.auth.RestAuthenticationEntryPoint;
+import informatika.security.auth.TokenAuthenticationFilter;
+import informatika.service.impl.CustomUserDetailsService;
 
 @Configuration
 // Ukljucivanje podrske za anotacije "@Pre*" i "@Post*" koje ce aktivirati autorizacione provere za svaki pristup metodi

@@ -13,7 +13,6 @@
       <button *ngIf="!hasSignedIn()" mat-button mat-ripple routerLink="/login">
         <span>Login</span>
       </button>
-      <button class="greeting-button" routerLink="/advert" mat-button> dugme za advert </button>
       <button
         *ngIf="hasSignedIn()"
         [matMenuTriggerFor]="accountMenu"

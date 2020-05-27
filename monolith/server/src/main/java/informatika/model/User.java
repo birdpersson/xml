@@ -1,4 +1,4 @@
-package rs.ac.uns.ftn.informatika.spring.security.model;
+package informatika.model;
 
 import java.sql.Timestamp;
 import java.util.Collection;

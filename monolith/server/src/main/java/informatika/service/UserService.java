@@ -1,9 +1,8 @@
-package rs.ac.uns.ftn.informatika.spring.security.service;
-
+package informatika.service;
 import java.util.List;
 
-import rs.ac.uns.ftn.informatika.spring.security.model.User;
-import rs.ac.uns.ftn.informatika.spring.security.model.UserRequest;
+import informatika.model.User;
+import informatika.model.UserRequest;
 
 public interface UserService {
     User findById(Long id);

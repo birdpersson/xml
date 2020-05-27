@@ -1,8 +1,7 @@
-package rs.ac.uns.ftn.informatika.spring.security.repository;
-
+package informatika.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import rs.ac.uns.ftn.informatika.spring.security.model.Authority;
+import informatika.model.Authority;
 
 public interface AuthorityRepository extends JpaRepository<Authority, Long> {
 	Authority findByName(String name);

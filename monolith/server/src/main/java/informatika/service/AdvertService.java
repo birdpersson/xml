@@ -1,10 +1,10 @@
-package rs.ac.uns.ftn.informatika.spring.security.service;
+package informatika.service;
 
 import java.nio.file.AccessDeniedException;
 import java.util.List;
 import java.util.Optional;
 
-import rs.ac.uns.ftn.informatika.spring.security.model.Advert;
+import informatika.model.Advert;
 
 public interface AdvertService {
 		List<Advert> findAll() throws AccessDeniedException;
