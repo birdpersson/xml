@@ -19,6 +19,7 @@ export const routes: Routes = [
   {
     path: 'advert',
    component: AdvertComponent
+
   },
   {
     path: 'signup',

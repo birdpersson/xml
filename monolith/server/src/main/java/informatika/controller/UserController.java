@@ -39,16 +39,11 @@ public class UserController {
 		return this.userService.findAll();
 	}
 
+	//@PreAuthorize("hasRole('ROLE_AGENCY')")
 	@GetMapping("/whoami")
-	@PreAuthorize("hasRole('ROLE_AGENCY')")
 	public User user(Principal user) {
 		return this.userService.findByUsername(user.getName());
 	}
 	
-	@GetMapping("/foo")
-    public Map<String, String> getFoo() {
-        Map<String, String> fooObj = new HashMap<>();
-        fooObj.put("foo", "bar");
-        return fooObj;
-    }
+	
 }

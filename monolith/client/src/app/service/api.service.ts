@@ -20,6 +20,7 @@ export enum RequestMethod {
 export class ApiService {
 
   headers = new HttpHeaders({
+    'Authorization' : localStorage.getItem("token"),
     'Accept': 'application/json',
     'Content-Type': 'application/json'
   });

@@ -13,7 +13,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.security.core.GrantedAuthority;
@@ -62,7 +64,18 @@ public class User implements UserDetails {
             inverseJoinColumns = @JoinColumn(name = "authority_id", referencedColumnName = "id"))
     private List<Authority> authorities;
 
-    public Long getId() {
+    @OneToMany(mappedBy = "user_id")
+    private List<Advert> users_adverts;
+    
+    public List<Advert> getUsers_adverts() {
+		return users_adverts;
+	}
+
+	public void setUsers_adverts(List<Advert> users_adverts) {
+		this.users_adverts = users_adverts;
+	}
+
+	public Long getId() {
         return id;
     }
 

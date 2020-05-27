@@ -17,7 +17,7 @@ export class AuthService {
   ) {
   }
 
-  private access_token = null;
+  private access_token = localStorage.getItem("token");
 
   login(user) {
     const loginHeaders = new HttpHeaders({
@@ -33,6 +33,8 @@ export class AuthService {
       .pipe(map((res) => {
         console.log('Login success');
         this.access_token = res.accessToken;
+        localStorage.setItem("token", this.access_token);
+
       }));
   }
 
@@ -50,6 +52,7 @@ export class AuthService {
   logout() {
       this.userService.currentUser = null;
       this.access_token = null; 
+      localStorage.setItem("token", null);
       this.router.navigate(['/login']);
   }
 

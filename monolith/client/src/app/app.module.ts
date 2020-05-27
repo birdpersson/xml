@@ -26,6 +26,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './interceptor/TokenInterceptor';
 import { AdvertComponent } from './component/advert/advert.component';
+import { PricelistComponent } from './pricelist/pricelist.component';
+import { InboxComponent } from './inbox/inbox.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import { AdvertComponent } from './component/advert/advert.component';
     ForbiddenComponent,
     AdminComponent,
     SignupComponent,
-    AdvertComponent
+    AdvertComponent,
+    PricelistComponent,
+    InboxComponent,
+    UserProfileComponent
   
   ],
   imports: [

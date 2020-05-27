@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import informatika.model.Advert;
+import informatika.model.User;
 import informatika.repository.Advertrepository;
 import informatika.service.AdvertService;
 
@@ -16,8 +17,8 @@ public class AdvertServiceImpl implements AdvertService {
 	private Advertrepository repo;
 	
 
-	public List<Advert> findAll() throws AccessDeniedException {
-		List<Advert> result = repo.findAll();
+	public List<Advert> findAll(Long user) throws AccessDeniedException {
+		List<Advert> result = repo.findAll(user);
 		return result;
 	}
 

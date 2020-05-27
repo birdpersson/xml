@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -15,6 +17,23 @@ public class Advert {
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	    private Long id;
 	 
+		@Column(name = "title")
+	    private String title;
+		
+		@Column(name = "user_id")
+		private Long user_id;
+		
+		@ManyToOne
+		@JoinColumn(name="user_id")		
+		public Long getOwner() {
+			return user_id;
+		}
+
+		public void setOwner(Long owner) {
+			this.user_id = owner;
+		}
+
+
 	    public Long getId() {
 			return id;
 		}
@@ -23,9 +42,7 @@ public class Advert {
 			this.id = id;
 		}
 
-		@Column(name = "title")
-	    private String title;
-
+		
 		public String getTitle() {
 			return title;
 		}
