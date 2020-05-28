@@ -22,8 +22,11 @@ export class AdvertService {
   getAdvertsFrom( ): Observable<Advert[]>{
     return this.apiService.get(this.config.users_adverts_url);
   }
-  postNewAdvert( ad ): Observable<Advert[]>{
+  postNewAdvert( ad:Advert ): Observable<Advert[]>{
    return this.apiService.post(this.config.add_advert_url , ad);
    
+  }
+  deleteAdvert(ad): Observable<void>{
+    return this.apiService.delete(this.config.delete_advert_url + '/' + ad);
   }
 }

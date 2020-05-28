@@ -21,6 +21,7 @@ export class ApiService {
 
   headers = new HttpHeaders({
     'Authorization' : localStorage.getItem("token"),
+    'Access-Control-Allow-Origin' : 'http://localhost:8080',
     'Accept': 'application/json',
     'Content-Type': 'application/json'
   });
@@ -51,6 +52,7 @@ export class ApiService {
   }
   
   delete(path: string, body?: any): Observable<any> {
+    console.log(this.headers);
     return this.request(path, body, RequestMethod.Delete);
   }
   

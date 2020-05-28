@@ -67,6 +67,11 @@ export class ConfigService {
     
     return this._users_adverts_url;
   }
+  private _delete_advert_url = this._advert_url + '/delete';
+
+  get delete_advert_url(): string{
+    return this._delete_advert_url;
+  }
 //  private _advert_by_id_url = this._advert_url + '/';
   
 }

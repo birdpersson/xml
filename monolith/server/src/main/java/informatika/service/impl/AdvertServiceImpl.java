@@ -35,4 +35,11 @@ public class AdvertServiceImpl implements AdvertService {
 		repo.save(ad);
 	}
 
+
+	@Override
+	public Optional<Advert> removeById(Long id) {
+		repo.deleteById(id);
+		return null;
+	}
+
 }

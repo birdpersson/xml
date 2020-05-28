@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AdvertService } from 'app/service/advert.service';
 import { UserService } from 'app/service';
 import { Advert } from 'app/shared/models/advert';
+import { retry } from 'rxjs/operators';
 
 @Component({
   selector: 'app-advert',
@@ -13,32 +14,42 @@ export class AdvertComponent implements OnInit {
   constructor(
     private advertService:AdvertService,    
     private userService: UserService) { }
+  currentUser: any;
   usersAdverts: Advert[];
-  me: any;
-  new_advert:Advert;
-  ngOnInit() {
-    this.showMyAdverts();
-    this.new_advert = new Advert();
-    this.getMyInfo();
-   
-  }
+  new_advert: Advert;
   
-  public getMyInfo(){
+  ngOnInit() {
+    //Bitan redosled jer se u novi_oglas referencira id korisnika.
+    this.new_advert = new Advert();  
+    this.new_advert.user_id;      
+    this.showMyAdverts();    
+    this.getMyInfo();
+    
+  }
+  //Metoda za vracanja celog objekta korisnika/agencije/admina i referenciranje svakog novog entiteta ka njemu*
+  getMyInfo(){
     this.userService.getMyInfo()
-    .subscribe(data => this.me = data);
+    .subscribe(data => {this.currentUser = data, this.new_advert.user_id = this.currentUser.id});
 
   }
-  public showMyAdverts(){
+  //Prikaz svih oglasa od ulogovanog usera
+  showMyAdverts(){
     this.advertService.getAdvertsFrom()
-    .subscribe( data => this.usersAdverts = data);
-   
-  }
-  submitAddForm(){
-    this.advertService.postNewAdvert(this.new_advert)
-    .subscribe((data)=> {      
-      this.new_advert.user_id = this.me.id;    
-      this.usersAdverts = data;
-    });
-  }
+    .subscribe( data => this.usersAdverts = data);   
+  } 
+  
+  //Dodavanje novog oglasa  
+  submitAddForm(){    
+   this.advertService.postNewAdvert(this.new_advert).subscribe((data)=> {       
+      this.usersAdverts = data});
+      return true;
+  }    
+  //Brisanje novog oglasa
+  deleteAdvert(id:number)
+  {
+    this.advertService.deleteAdvert(id).subscribe(
+      res => this.showMyAdverts()
+    );
 
+  }
 }

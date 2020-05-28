@@ -22,7 +22,10 @@
         <mat-form-field>
             <mat-label>Age</mat-label>
             <input matInput type="number" min="1">
-        </mat-form-field>
+        </mat-form-field> 
+         <button mat-fab color="primary" (click)="deleteAdvert([ad.id])">
+            <mat-icon>delete</mat-icon>
+          </button>
         
     </mat-expansion-panel>
 </div>
@@ -31,7 +34,7 @@
     <form (ngSubmit)="(submitAddForm())" class="example-form">
         <mat-form-field class="example-full-width">
           <mat-label>Naslov oglasa</mat-label>
-          <input  [(ngModel)]="new_advert.title" name="title" matInput maxlength="256" placeholder="Model, serija, godiste...">
+          <input   [(ngModel)]="new_advert.title" name="title" matInput maxlength="256" placeholder="Model, serija, godiste...">
         </mat-form-field>
         <button type="submit">Ok</button>
       </form>

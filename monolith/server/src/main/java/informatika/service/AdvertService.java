@@ -11,4 +11,5 @@ public interface AdvertService {
 		List<Advert> findAll(Long user) throws AccessDeniedException;
 		Optional<Advert> getAdById(Long id);
 		void save(Advert ad);
+		Optional<Advert> removeById(Long id);
 }
