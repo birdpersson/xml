@@ -1,5 +1,5 @@
 
-package informatika.model;
+package informatika.model.additions;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,8 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "MODEL")
-public class Model {
+@Table(name = "CITY")
+public class City {
 
 	@Id
     @Column(name = "id")
@@ -19,11 +19,9 @@ public class Model {
  
 	@Column(name = "title")
     private String title;
-
-	@Override
-	public String toString() {
-		return "Model [id=" + id + ", title=" + title + "]";
-	}
+	
+	@Column(name = "code")
+    private Integer code;
 
 	public Long getId() {
 		return id;
@@ -40,5 +38,14 @@ public class Model {
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
+	public Integer getCode() {
+		return code;
+	}
+
+	public void setCode(Integer code) {
+		this.code = code;
+	}
+	
 	
 }

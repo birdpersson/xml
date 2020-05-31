@@ -1,4 +1,5 @@
-package informatika.model;
+
+package informatika.model.additions;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,8 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "MANUFACTURER")
-public class Manufacturer {
+@Table(name = "MODEL")
+public class Model {
 
 	@Id
     @Column(name = "id")
@@ -21,7 +22,7 @@ public class Manufacturer {
 
 	@Override
 	public String toString() {
-		return "Manufacturer [id=" + id + ", title=" + title + "]";
+		return "Model [id=" + id + ", title=" + title + "]";
 	}
 
 	public Long getId() {

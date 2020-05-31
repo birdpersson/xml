@@ -17,4 +17,8 @@ export class CodebookService {
     getCodebook() {
       return this.apiService.get(this.config.get_codebook_url);
     }
+    getCities(){
+      return this.apiService.get(this.config.get_cities_url);
+    }
+    
 }

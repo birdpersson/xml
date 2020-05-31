@@ -5,9 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import informatika.model.Codebook;
-import informatika.model.Fuel;
-import informatika.model.Manufacturer;
-import informatika.model.Model;
+import informatika.model.additions.CarClass;
+import informatika.model.additions.City;
+import informatika.model.additions.Fuel;
+import informatika.model.additions.Manufacturer;
+import informatika.model.additions.Model;
 import informatika.repository.CodebookRepository;
 import informatika.service.CodebookService;
 
@@ -33,5 +35,14 @@ public class CodebookServiceImpl implements CodebookService {
 		cb.setModels(getModels());
 		
 		return cb;
+	}
+	@Override
+	public List<CarClass> getCarClasses() {
+		
+		return repo.getCarClasses();
+	}
+	@Override
+	public List<City> getCities() {
+		return repo.getCities();
 	}
 	}

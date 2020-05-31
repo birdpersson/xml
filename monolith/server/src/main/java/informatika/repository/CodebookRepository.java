@@ -5,9 +5,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import informatika.model.Advert;
-import informatika.model.Fuel;
-import informatika.model.Manufacturer;
-import informatika.model.Model;
+import informatika.model.additions.CarClass;
+import informatika.model.additions.City;
+import informatika.model.additions.Fuel;
+import informatika.model.additions.Manufacturer;
+import informatika.model.additions.Model;
 
 public interface CodebookRepository extends JpaRepository<Advert, Long> {
 	
@@ -19,6 +21,12 @@ public interface CodebookRepository extends JpaRepository<Advert, Long> {
 	
 	@Query("SELECT f FROM Fuel f")
 	List<Fuel> getFuels();
+
+	@Query("SELECT c FROM CarClass c")
+	List<CarClass> getCarClasses();
+
+	@Query("SELECT c FROM City c")
+	List<City> getCities();
 	
 	
 	

@@ -3,6 +3,10 @@ package informatika.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import informatika.model.additions.Fuel;
+import informatika.model.additions.Manufacturer;
+import informatika.model.additions.Model;
+
 public class Codebook {
 
 	private ArrayList<Fuel> fuels;

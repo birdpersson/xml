@@ -4,7 +4,7 @@ import {Injectable} from '@angular/core';
   providedIn: 'root'
 })
 export class ConfigService {
-
+ 
   private _api_url = 'http://localhost:8080/api';
   private _auth_url = 'http://localhost:8080/auth';
   private _user_url = this._api_url + '/user';
@@ -77,5 +77,9 @@ export class ConfigService {
   get get_codebook_url(): string{
     return this._get_codebook_url;
   }
-  
+  private _get_cities_url = this._api_url + '/codebook/cities';
+
+  get get_cities_url(): string{
+    return this._get_cities_url;
+  }
 }

@@ -11,13 +11,15 @@ export class CodeBookComponent implements OnInit {
   constructor( private cbservice : CodebookService) { }
 
   ngOnInit() {
+    
     this.showCodes();
   }
 
   private codes: any;
+  
+  
   showCodes(){
     this.cbservice.getCodebook().subscribe(data => this.codes = data);
-    
   }
 
 }
