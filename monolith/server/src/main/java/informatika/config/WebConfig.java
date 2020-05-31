@@ -1,3 +1,4 @@
+
 package informatika.config;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -13,8 +14,9 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
     	// localhost:4200
-        registry.addMapping("/**").allowedOrigins("*")
-        .allowedMethods("*");
+        registry.addMapping("/**")
+		        .allowedOrigins("http://localhost:4200")
+		        .allowedMethods("*");
     }
     
 }

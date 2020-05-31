@@ -41,7 +41,15 @@ export class UserService {
         return user;
       }));
   }
-
+  amIAdmin(){
+    if(this.currentUser != null){
+      var auths = this.currentUser.authorities;
+      for(var auth of auths)
+        if(auth.authority === "ROLE_ADMIN")
+          return true;
+      return false;
+    }
+  }
   getAll() {
     return this.apiService.get(this.config.users_url);
   }

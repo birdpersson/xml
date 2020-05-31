@@ -10,7 +10,7 @@ export class ConfigService {
   private _user_url = this._api_url + '/user';
 
   private _refresh_token_url = this._api_url + '/refresh';
-
+  
   get refresh_token_url(): string {
     return this._refresh_token_url;
   }
@@ -72,6 +72,10 @@ export class ConfigService {
   get delete_advert_url(): string{
     return this._delete_advert_url;
   }
-//  private _advert_by_id_url = this._advert_url + '/';
+  private _get_codebook_url = this._api_url + '/codebook/all';
+
+  get get_codebook_url(): string{
+    return this._get_codebook_url;
+  }
   
 }

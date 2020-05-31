@@ -22,6 +22,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  ifAdmin(){
+    return this.userService.amIAdmin();
+  }
   makeRequest(path) {
     if (this.config.foo_url.endsWith(path)) {
       this.fooService.getFoo()

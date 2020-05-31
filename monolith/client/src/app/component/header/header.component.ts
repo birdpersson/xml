@@ -17,12 +17,16 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
+   
   }
 
   logout() {
     this.authService.logout();
   }
 
+  ifAdmin(){
+    return this.userService.amIAdmin();
+  }
   hasSignedIn() {
     return !!this.userService.currentUser;
   }

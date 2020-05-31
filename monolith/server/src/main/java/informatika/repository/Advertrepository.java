@@ -9,7 +9,9 @@ import informatika.model.Advert;
 import informatika.model.User;
 
 public interface Advertrepository extends JpaRepository<Advert, Long> {
+	
 	@Query("SELECT a FROM Advert a WHERE a.user_id = :user")
 	List<Advert> findAll(@Param("user") Long user);
+	
 	
 }

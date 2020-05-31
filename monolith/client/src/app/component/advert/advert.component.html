@@ -1,4 +1,4 @@
-
+<div >
 <h1>Moji oglasi</h1>
 
 <div *ngFor="let ad of usersAdverts" >
@@ -34,7 +34,8 @@
     <form (ngSubmit)="(submitAddForm())" class="example-form">
         <mat-form-field class="example-full-width">
           <mat-label>Naslov oglasa</mat-label>
-          <input   [(ngModel)]="new_advert.title" name="title" matInput maxlength="256" placeholder="Model, serija, godiste...">
+          <input [(ngModel)]="new_advert.title" name="title" matInput maxlength="256" placeholder="Model, serija, godiste...">
         </mat-form-field>
         <button type="submit">Ok</button>
       </form>
+</div>

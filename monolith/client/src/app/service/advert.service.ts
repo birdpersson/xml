@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {ApiService} from './api.service';
 import {ConfigService} from './config.service';
-import {map} from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import {Advert} from '../shared/models/advert';
 
@@ -22,11 +21,14 @@ export class AdvertService {
   getAdvertsFrom( ): Observable<Advert[]>{
     return this.apiService.get(this.config.users_adverts_url);
   }
+  
+
   postNewAdvert( ad:Advert ): Observable<Advert[]>{
    return this.apiService.post(this.config.add_advert_url , ad);
    
-  }
-  deleteAdvert(ad): Observable<void>{
-    return this.apiService.delete(this.config.delete_advert_url + '/' + ad);
+  }  
+  
+  deleteAdvert(id): Observable<void>{
+    return this.apiService.delete(this.config.delete_advert_url + '/' + id);
   }
 }

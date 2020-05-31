@@ -42,8 +42,11 @@ public class User implements UserDetails {
     @JsonIgnore
     @Column(name = "password")
     private String password;
+   
+    @Column(name="status")
+    private String status;
 
-    @Column(name = "first_name")
+	@Column(name = "first_name")
     private String firstName;
 
     @Column(name = "last_name")
@@ -94,6 +97,15 @@ public class User implements UserDetails {
     public String getPassword() {
         return password;
     }
+
+    public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
 
     public void setPassword(String password) {
         Timestamp now = new Timestamp(new Date().getTime());

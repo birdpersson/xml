@@ -52,7 +52,6 @@ export class ApiService {
   }
   
   delete(path: string, body?: any): Observable<any> {
-    console.log(this.headers);
     return this.request(path, body, RequestMethod.Delete);
   }
   

@@ -1,0 +1,20 @@
+<mat-list role="list">
+  <h2>Sifrarnik za goriva</h2>
+  <div *ngFor="let fuel of codes.fuels">
+    {{fuel.title}}
+  </div>
+</mat-list>
+
+<mat-list role="list">
+  <h2>Sifrarnik za modele</h2>
+  <div *ngFor="let model of codes.models">
+    {{model.title}}
+  </div>
+</mat-list>
+
+<mat-list role="list">
+  <h2>Sifrarnik za proizvodjace</h2>
+  <div *ngFor="let manu of codes.manufacturers">
+    {{manu.title}}
+  </div>
+</mat-list>

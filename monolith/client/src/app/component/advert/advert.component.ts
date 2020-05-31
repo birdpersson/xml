@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AdvertService } from 'app/service/advert.service';
 import { UserService } from 'app/service';
 import { Advert } from 'app/shared/models/advert';
-import { retry } from 'rxjs/operators';
 
 @Component({
   selector: 'app-advert',
@@ -29,7 +28,8 @@ export class AdvertComponent implements OnInit {
   //Metoda za vracanja celog objekta korisnika/agencije/admina i referenciranje svakog novog entiteta ka njemu*
   getMyInfo(){
     this.userService.getMyInfo()
-    .subscribe(data => {this.currentUser = data, this.new_advert.user_id = this.currentUser.id});
+    .subscribe(data => {this.currentUser = data,
+                        this.new_advert.user_id = this.currentUser.id});
 
   }
   //Prikaz svih oglasa od ulogovanog usera
@@ -50,6 +50,6 @@ export class AdvertComponent implements OnInit {
     this.advertService.deleteAdvert(id).subscribe(
       res => this.showMyAdverts()
     );
-
+      
   }
 }

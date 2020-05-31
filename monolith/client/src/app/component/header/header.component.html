@@ -19,6 +19,7 @@
         class="greeting-button" mat-button
         mat-ripple>
         <span>Aloha, {{userName()}}</span>
+        
       </button>
       <button
         *ngIf="hasSignedIn()"
@@ -36,4 +37,6 @@
     </div>
   </div>
 </mat-toolbar>
-
+<p>
+{{ifAdmin()|json}}
+</p>

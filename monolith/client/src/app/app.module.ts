@@ -30,6 +30,7 @@ import { AdvertComponent } from './component/advert/advert.component';
 import { PricelistComponent } from './pricelist/pricelist.component';
 import { InboxComponent } from './inbox/inbox.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { CodeBookComponent } from './code-book/code-book.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     AdvertComponent,
     PricelistComponent,
     InboxComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    CodeBookComponent
   
   ],
   imports: [

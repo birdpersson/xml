@@ -33,8 +33,8 @@ public class AdvertServiceImpl implements AdvertService {
 	@Override
 	public void save(Advert ad) {
 		repo.save(ad);
+		
 	}
-
 
 	@Override
 	public Optional<Advert> removeById(Long id) {

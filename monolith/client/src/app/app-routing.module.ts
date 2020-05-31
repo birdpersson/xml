@@ -9,6 +9,7 @@ import {ChangePasswordComponent} from './change-password';
 import {ForbiddenComponent} from './forbidden';
 import {SignupComponent} from './signup';
 import {AdvertComponent} from './component/advert';
+import { CodeBookComponent } from './code-book/code-book.component';
 
 export const routes: Routes = [
   {
@@ -18,8 +19,14 @@ export const routes: Routes = [
   },
   {
     path: 'advert',
-   component: AdvertComponent
+    component: AdvertComponent,
+    canActivate: [LoginGuard]   
 
+  },
+  {
+    path: 'codebook',
+    component: CodeBookComponent,
+    canActivate: [LoginGuard]
   },
   {
     path: 'signup',
