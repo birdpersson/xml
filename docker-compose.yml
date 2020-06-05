@@ -1,0 +1,38 @@
+version: "3.7"
+services:
+
+  monolith:
+    build: ./monolith
+    image: monolith:1.0.0
+    container_name: monolith
+    restart: on-failure
+    networks:
+      - demo
+    ports:
+      - 8080:8080
+    environment:
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: postgres
+      DATABASE_DOMAIN: db
+      DATABASE_SCHEMA: postgres
+    depends_on: 
+      - db
+
+  db:
+    image: postgres
+    container_name: db
+    restart: always
+    networks:
+      - demo
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres-data:/var/lib/postgres
+
+volumes:
+  postgres-data:
+
+networks:
+  demo:
+    name: demo
+    driver: bridge
