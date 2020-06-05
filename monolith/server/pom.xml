@@ -9,13 +9,13 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>rs.ac.uns.ftn.informatika</groupId>
-	<artifactId>spring-security-example</artifactId>
+	<groupId>informatika</groupId>
+	<artifactId>monolith</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
-	<name>spring-security-example</name>
+	<name>monolith</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
