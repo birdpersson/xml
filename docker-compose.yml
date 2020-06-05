@@ -12,21 +12,20 @@ services:
       - 8080:8080
     environment:
       DATABASE_USERNAME: postgres
-      DATABASE_PASSWORD: root
-      DATABASE_DOMAIN: postgres
+      DATABASE_PASSWORD: postgres
+      DATABASE_DOMAIN: db
+      DATABASE_SCHEMA: postgres
     depends_on: 
-      - postgres
+      - db
 
-  postgres:
-    image: postgres:latest
-    container_name: postgres
+  db:
+    image: postgres
+    container_name: db
     restart: always
     networks:
       - demo
     environment:
-      POSTGRES_ROOT_PASSWORD: root
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: root
+      POSTGRES_PASSWORD: postgres
     volumes:
       - postgres-data:/var/lib/postgres
 
