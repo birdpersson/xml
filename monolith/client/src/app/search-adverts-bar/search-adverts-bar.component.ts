@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CodebookService } from 'app/service/codebook.service';
 import { FormControl } from '@angular/forms';
+import { AdvertService } from 'app/service/advert.service';
 
 @Component({
   selector: 'app-search-adverts-bar',
@@ -9,9 +10,12 @@ import { FormControl } from '@angular/forms';
 })
 export class SearchAdvertsBarComponent implements OnInit {
 
-  constructor(private cbservice : CodebookService) { }
+  constructor(private cbservice : CodebookService,
+    private adservice : AdvertService) { }
 
   private cities: any;
+  private selected: any;
+  private searchAttributes: any;
   ngOnInit() {
     this.showCities();
   }
@@ -19,7 +23,11 @@ export class SearchAdvertsBarComponent implements OnInit {
   cityList = new FormControl();
   
   showCities(){
-    console.log("da");
+    
     this.cbservice.getCities().subscribe(data => this.cities = data);
+  }
+  submitSearchForm(){
+    this.searchAttributes.setCitySearch(this.selected);
+   //  this.adservice.getFilteredAdverts(this.searchAttributes).subcribe();
   }
 }

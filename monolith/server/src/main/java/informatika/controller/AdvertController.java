@@ -34,9 +34,17 @@ public class AdvertController {
 	@Autowired
 	private CustomUserDetailsService userDetailsService;
 
-	@GetMapping("/all")
+
+	@GetMapping("all")
 	//@PreAuthorize("hasRole('ADMIN')")	
 	public List<Advert> getAllAds(@RequestHeader("Authorization") String header) throws AccessDeniedException {
+		
+		return adservice.findAllAds();
+	}
+	
+	@GetMapping("me/all")
+	//@PreAuthorize("hasRole('ADMIN')")	
+	public List<Advert> getMyAds(@RequestHeader("Authorization") String header) throws AccessDeniedException {
 		// Jer je header string BEARER + token pa sklanjamo visak
 		String[] divider = header.split(" ");
 		String token;
@@ -49,6 +57,10 @@ public class AdvertController {
 		return adservice.findAll(user.getId());
 	}
 	
+/*	public List<Advert> getFilteredAds(){
+	@GetMapping("/all/search")
+		
+	}*/
 	@GetMapping("/{id}")
 	public Optional<Advert> getAdById(@PathVariable Long id) {
 		return adservice.getAdById(id);

@@ -33,6 +33,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { CodeBookComponent } from './code-book/code-book.component';
 import { RentACarAdvertsComponent } from './rent-a-car-adverts/rent-a-car-adverts.component';
 import { SearchAdvertsBarComponent } from './search-adverts-bar/search-adverts-bar.component';
+import { AdvertCardComponent } from './component/advert-card/advert-card.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { SearchAdvertsBarComponent } from './search-adverts-bar/search-adverts-b
     UserProfileComponent,
     CodeBookComponent,
     RentACarAdvertsComponent,
-    SearchAdvertsBarComponent
+    SearchAdvertsBarComponent,
+    AdvertCardComponent
   
   ],
   imports: [

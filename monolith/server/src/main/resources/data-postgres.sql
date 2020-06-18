@@ -18,10 +18,7 @@ INSERT INTO USER_AUTHORITY (user_id, authority_id) VALUES (2, 1);
 INSERT INTO USER_AUTHORITY (user_id, authority_id) VALUES (2, 2);
 INSERT INTO USER_AUTHORITY (user_id, authority_id) VALUES (2, 3);
 INSERT INTO USER_AUTHORITY (user_id, authority_id) VALUES (3, 1);
-INSERT INTO FUEL (id, title) VALUES (1, 'Dizel');
-INSERT INTO FUEL (id, title) VALUES (2, 'Bezolovni dizel');
-INSERT INTO FUEL (id, title) VALUES (3, 'Benzin');
-INSERT INTO FUEL (id, title) VALUES (4, 'Bio dizel');
+
 
 INSERT INTO MODEL (id, title) VALUES  (1, 'C1');
 INSERT INTO MODEL (id, title) VALUES  (2, 'C2');

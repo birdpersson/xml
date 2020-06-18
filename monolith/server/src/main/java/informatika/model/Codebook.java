@@ -3,6 +3,7 @@ package informatika.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import informatika.model.additions.City;
 import informatika.model.additions.Fuel;
 import informatika.model.additions.Manufacturer;
 import informatika.model.additions.Model;
@@ -12,6 +13,8 @@ public class Codebook {
 	private ArrayList<Fuel> fuels;
 	private ArrayList<Model> models;
 	private ArrayList<Manufacturer> manufacturers;
+	private ArrayList<City> cities;
+	
 	public List<Fuel> getFuels() {
 		return fuels;
 	}
@@ -34,5 +37,12 @@ public class Codebook {
 	public String toString() {
 		return "Codebook [fuels=" + fuels + ", models=" + models + ", manufacturers=" + manufacturers + "]";
 	}
+	public ArrayList<City> getCities() {
+		return cities;
+	}
+	public void setCities(List<City> list) {
+		this.cities = new ArrayList<City>(list);
+	}
+
 }
 

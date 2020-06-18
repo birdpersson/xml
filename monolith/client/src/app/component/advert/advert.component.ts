@@ -44,12 +44,5 @@ export class AdvertComponent implements OnInit {
       this.usersAdverts = data});
       return true;
   }    
-  //Brisanje novog oglasa
-  deleteAdvert(id:number)
-  {
-    this.advertService.deleteAdvert(id).subscribe(
-      res => this.showMyAdverts()
-    );
-      
-  }
+ 
 }

@@ -16,4 +16,5 @@ public interface CodebookService {
 	public List<CarClass> getCarClasses();
 	public List<City> getCities();
 	public Codebook getAll();
+
 }

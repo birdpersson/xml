@@ -22,4 +22,10 @@ export class CodeBookComponent implements OnInit {
     this.cbservice.getCodebook().subscribe(data => this.codes = data);
   }
 
+  addFuelType(){
+    let fuel;
+
+    this.cbservice.addFuelType(fuel);
+  }
+
 }

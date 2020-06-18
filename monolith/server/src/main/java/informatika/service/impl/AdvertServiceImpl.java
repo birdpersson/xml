@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import informatika.model.Advert;
-import informatika.model.User;
 import informatika.repository.Advertrepository;
 import informatika.service.AdvertService;
 
@@ -40,6 +39,12 @@ public class AdvertServiceImpl implements AdvertService {
 	public Optional<Advert> removeById(Long id) {
 		repo.deleteById(id);
 		return null;
+	}
+
+
+	@Override
+	public List<Advert> findAllAds() {
+		return repo.findAll();
 	}
 
 }

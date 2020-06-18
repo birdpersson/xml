@@ -15,10 +15,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "ADVERT")
 public class Advert {
-		@Override
-	public String toString() {
-		return "Advert [id=" + id + ", title=" + title + ", user_id=" + user_id + "]";
-	}
+	
 
 		@Id
 	    @Column(name = "id")
@@ -63,4 +60,8 @@ public class Advert {
 			this.title = title;
 		}
 
+		@Override
+		public String toString() {
+			return "Advert [id=" + id + ", title=" + title + ", user_id=" + user_id + "]";
+		}
 }

@@ -1,41 +1,20 @@
-<div >
-<h1>Moji oglasi</h1>
+<div>
+  <h1>Moji oglasi</h1>
 
-<div *ngFor="let ad of usersAdverts" >
-    
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                {{ad.id}}# {{ad.title}}
-            </mat-panel-title>
-            <mat-panel-description>
-                Type your name and age
-                <mat-icon>account_circle</mat-icon>
-            </mat-panel-description>
-        </mat-expansion-panel-header>
-        
-        <mat-form-field>
-            <mat-label>First name</mat-label>
-            <input matInput>
-        </mat-form-field>
-        
-        <mat-form-field>
-            <mat-label>Age</mat-label>
-            <input matInput type="number" min="1">
-        </mat-form-field> 
-         <button mat-fab color="primary" (click)="deleteAdvert([ad.id])">
-            <mat-icon>delete</mat-icon>
-          </button>
-        
-    </mat-expansion-panel>
-</div>
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div *ngFor="let advert of usersAdverts">
+      <app-advert-card [advert]='advert' myAd='true'></app-advert-card>
+    </div>
+  </div>
 
-<h3> Dodaj novi oglas</h3>
-    <form (ngSubmit)="(submitAddForm())" class="example-form">
-        <mat-form-field class="example-full-width">
-          <mat-label>Naslov oglasa</mat-label>
-          <input [(ngModel)]="new_advert.title" name="title" matInput maxlength="256" placeholder="Model, serija, godiste...">
-        </mat-form-field>
-        <button type="submit">Ok</button>
-      </form>
+
+  <h3> Dodaj novi oglas</h3>
+  <form (ngSubmit)="(submitAddForm())" class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Naslov oglasa</mat-label>
+      <input [(ngModel)]="new_advert.title" name="title" matInput maxlength="256"
+        placeholder="Model, serija, godiste...">
+    </mat-form-field>
+    <button type="submit">Ok</button>
+  </form>
 </div>

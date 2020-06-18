@@ -61,11 +61,15 @@ export class ConfigService {
   get add_advert_url(): string{
     return this._add_advert_url;
   }
-  private _users_adverts_url = this._advert_url + '/all';
+  private _users_adverts_url = this._advert_url + '/me/all';
 
   get users_adverts_url(): string{
     
     return this._users_adverts_url;
+  }
+  private _all_adverts = this._advert_url + '/all';
+  get all_adverts(): string{
+    return this._all_adverts;
   }
   private _delete_advert_url = this._advert_url + '/delete';
 
@@ -81,5 +85,8 @@ export class ConfigService {
 
   get get_cities_url(): string{
     return this._get_cities_url;
+  }
+  get add_fuel(): string{
+    return '/add/fuel';
   }
 }

@@ -33,9 +33,10 @@ public class CodebookServiceImpl implements CodebookService {
 		cb.setFuels(getFuels());
 		cb.setManufacturers(getManufacturers());
 		cb.setModels(getModels());
-		
+		cb.setCities(getCities());		
 		return cb;
 	}
+
 	@Override
 	public List<CarClass> getCarClasses() {
 		
